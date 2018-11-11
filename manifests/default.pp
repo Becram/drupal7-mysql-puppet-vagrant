@@ -1,4 +1,6 @@
 node default {
-  include hello_web
-  include install_ssh
+  include install_nginx
+
+  
+  
 }
