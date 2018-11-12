@@ -1,4 +1,5 @@
 #!/bin/sh
+echo "nameserver 8.8.8.8" > /etc/resolv.conf
 command -v puppet > /dev/null && { echo "Puppet is installed! skipping" ; exit 0; }
 
 ID=$(cat /etc/os-release | awk -F= '/^ID=/{print $2}' | tr -d '"')
