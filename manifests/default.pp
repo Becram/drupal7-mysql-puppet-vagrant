@@ -1,6 +1,15 @@
 node default {
-  include install_nginx
+  include drupalstack::nginx
+  include drupalstack::php
+  include drupalstack::drupalcore
+  include drupalstack::drupalapp
 
-  
-  
+#  class { '::php::globals':
+#  php_version => '7.0',
+#  config_root => '/etc/php/7.0',
+#   }->
+#  class { '::php':
+#      manage_repos => true
+#  }
 }
+
